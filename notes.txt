@@ -1,0 +1,31 @@
+Results for the extraLargeArray
+insert 767.057625 ms
+append 1.829708 ms
+
+Results for the tinyArray
+insert 18.75 μs
+append 53.375 μs
+
+Results for the smallArray
+insert 26.667 μs
+append 61.375 μs
+
+Results for the mediumArray
+insert 136.458 μs
+append 90.25 μs
+
+Results for the largeArray
+insert 7.186584 ms
+append 433.375 μs
+
+The slower function (doublerInsert) is slow because it inserts elements 
+at the beginning of the array (unshift operation) in each iteration.
+This operation has a time complexity of O(n) where n is the size of the array.
+As the array size increases, the time to insert at the beginning
+becomes increasingly slower, resulting in poor scalability. 
+In contrast, doublerAppend simply appends elements to the end of the array,
+which has an average time complexity of O(1). 
+It scales better because adding elements to the end of an array is generally faster
+and more efficient than inserting elements at the beginning.
+
+
